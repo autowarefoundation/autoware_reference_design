@@ -34,6 +34,6 @@
 
 - Appendix
   - Hardware List
-  - Open AD Kit Start Guide
+  - [Open AD Kit Start Guide](docs/Appendix/Open-AD-Kit-Start-Guide/index.md)
   - Design Docs of E2E Simulator
   - Design Docs of Scenario Simulator
