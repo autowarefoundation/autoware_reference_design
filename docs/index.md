@@ -1,6 +1,6 @@
 # Autoware Reference Design
 
-## Table of contens
+## Table of contents
 
 1. [Introduction of Reference Design](docs/Introduction-of-Reference-Design/index.md)
 2. Operation Environment Requirements
