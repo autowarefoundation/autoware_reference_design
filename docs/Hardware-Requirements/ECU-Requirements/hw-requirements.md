@@ -1,5 +1,7 @@
 # Hardware Requirements
 
+This is a draft version.
+
 ## Overview
 
 This page describes sample requirements for hardware specification.

@@ -1,5 +1,7 @@
 # High-level Architecture
 
+This is a draft version.
+
 ## Overview
 
 The reference system consists of three parts of computing unit.
