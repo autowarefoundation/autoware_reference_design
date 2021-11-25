@@ -1,5 +1,7 @@
 # Performance and Data Bandwidth Requirements
 
+This is a draft version.
+
 ## Overview
 
 This page describes required performance for the perception accelerators and data bandwidth on each sensor interface and network.

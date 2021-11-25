@@ -1,5 +1,7 @@
 # System Resource & Interface
 
+This is a draft version.
+
 ## Overview
 
 The following tables describe the required system resource and interface for each computing unit.
