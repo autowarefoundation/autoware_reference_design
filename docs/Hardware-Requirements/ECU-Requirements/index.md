@@ -8,5 +8,5 @@ T.B.D.
 
 1. [High-level Architecture](highlevel-arch.md)
 2. [System Resource & Interface](sys-resource-if.md)
-3. [Performance Requirements](perf-requirements.md)
+3. [Performance and Data Bandwidth Requirements](perf-data-bandwidth.md)
 4. [Hardware Requirements](hw-requirements.md)
