@@ -4,7 +4,7 @@ This is a draft version.
 
 ## Overview
 
-T.B.D.
+The requirements described in the following pages are determined based on a Tier IV project as a reference for now. This will be updated once the requirements for Open AD Kit was determined.
 
 ## Table of contents
 
