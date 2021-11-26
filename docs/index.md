@@ -7,7 +7,7 @@
    1. ODD Use Cases
 3. System Requirements
    1. Overall Specification
-      1. Parity Requirements
+      1. [Parity Requirements](docs/System-Requirements/Overall-Specification/Parity-Requirements/index.md)
    2. Function List
       1. MRM and Diagnostics per Vehicle/ODD
 4. System Configurations
