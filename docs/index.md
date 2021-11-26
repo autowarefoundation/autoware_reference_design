@@ -16,7 +16,7 @@
    3. Network Configuration
 5. Hardware Requirements
    1. Vehicle Requirements
-   2. ECU Requirements
+   2. [ECU Requirements](docs/Hardware-Requirements/ECU-Requirements/index.md)
    3. Sensor Requirements
       1. LiDAR Requirements
       2. Camera Requirements
