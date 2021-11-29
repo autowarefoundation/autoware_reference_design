@@ -20,13 +20,13 @@ You need to copy docker images and neccesary files.
 
 ## Copy Autoware.Auto image to AVA platform
 
-The docker image of Autoware.Auto is registered in [Amazon ECR](https://gallery.ecr.aws/k7o9k6q7/tier4/autoware.auto).
-![Amazon ECR](images/system-setup-ava/amazon-ecr.png)
+The docker image of Autoware.Auto is registered in [GitLab Container Registry](https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/container_registry/2511358).
+![GitLab Container Registry](images/system-setup-ava/gitlab-cr.png)
 
 1. Copy docker image to AVA platform.
 
    ```console
-   docker pull public.ecr.aws/k7o9k6q7/tier4/autoware.auto:open_ad_kit-autoware-auto-20211111234534-88ea1196cdc0-2zv2o
+   docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest
    ```
 
 ## Copy neccesary files to USB drive
