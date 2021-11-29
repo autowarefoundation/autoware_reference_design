@@ -23,4 +23,5 @@ Please feel free to contact ADLINK customer support.
 1. [System Setup on AVA platform](system-setup-ava.md)
 1. [System Setup on your host](system-setup-host.md)
 1. [Run Autoware.Auto and scenario simulator](run-autoware.md)
+1. [Cloud native CI/CD - Web.Auto](cloud-native-cicd-webauto.md)
 1. [Known limiations and issues](limitations-issues.md)

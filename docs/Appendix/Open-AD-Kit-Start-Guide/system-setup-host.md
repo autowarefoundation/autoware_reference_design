@@ -8,13 +8,13 @@ You need to copy docker images and neccesary files, and checkout Autoware.Auto.
 
 ## Copy scenario simulator image to your host machine
 
-The docker image of scenario simulator is registered in [docker hub](https://hub.docker.com/r/viosfish/scenario_simulator).
+The docker image of scenario simulator is registered in [docker hub](https://hub.docker.com/r/tier4/scenario_simulator_v2/tags).
 ![docker hub](images/system-setup-host/docker-hub.png)
 
 1. Copy docker image to your host machine.
 
    ```console
-   docker pull viosfish/scenario_simulator:open_ad_kit-autoware-auto-planning_sim_v2-20211111234534-88ea1196cdc0-2zv2o
+   docker pull tier4/scenario_simulator_v2:open_ad_kit-amd64-foxy
    ```
 
 ## Copy neccesary files to your host machine
