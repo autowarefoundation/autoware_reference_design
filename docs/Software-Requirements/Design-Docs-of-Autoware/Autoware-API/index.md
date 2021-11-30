@@ -8,7 +8,7 @@ It also works as a framework for easy access to the functions of each component 
 ## Concept
 
 There are two categories of Autoware API.
-One is Autoware AD API for operating the vehicle from outside the autonomous driving system such as fleet management system and HMI for operators or passengers.
+One is Autoware AD API for operating the vehicle from outside the autonomous driving system such as Fleet Management System(FMS) and HMI for operators or passengers.
 The other is Autoware Component Interfaces for linking each internal component.
 Some external systems for evaluation or debugging purposes, such as simulator, are allowed access to Component Interfaces in addition to AD API.
 
