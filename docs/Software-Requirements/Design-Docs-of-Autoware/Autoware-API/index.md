@@ -8,15 +8,15 @@ It also works as a framework for easy access to the functions of each component 
 ## Concept
 
 There are two categories of Autoware API.
-One is Autoware ADAPI for operating the vehicle from outside the autonomous driving system such as fleet management system and HMI for operators or passengers.
+One is Autoware AD API for operating the vehicle from outside the autonomous driving system such as fleet management system and HMI for operators or passengers.
 The other is Autoware Component Interfaces for linking each internal component.
-Some external systems for evaluation or debugging purposes, such as simulator, are allowed access to Component Interfaces in addition to ADAPI.
+Some external systems for evaluation or debugging purposes, such as simulator, are allowed access to Component Interfaces in addition to AD API.
 
 ![architecture](./architecture.drawio.svg)
 
-## ADAPI Customization
+## AD API Customization
 
-For general usage, Autoware provides default ADAPI implementations and configurations using Component Interfaces.
+For general usage, Autoware provides default AD API implementations and configurations using Component Interfaces.
 If special behavior is needed, the implementation can be modified as long as it satisfy the requirements of the specification.
 
 ![customization](./customization.drawio.svg)
