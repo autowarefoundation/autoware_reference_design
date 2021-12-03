@@ -92,6 +92,22 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
       cp -r /mnt/usb/* ~/
       ```
 
+   1. Confirm files are correctly placed.
+
+      ```console
+      home
+      └── root
+             ├── cyclonedds
+             │     └── cyclonedds.xml
+             └── map
+                    └── kashiwanoha
+                          ├── global_map_center.pcd.yaml
+                          ├── lanelet2_map.osm
+                          ├── lanelet2_map_provider.osm.yaml
+                          ├── map.map_publisher.yaml
+                          └── pointcloud_map.pcd
+      ```
+
    1. Move kernel configuration file to `/etc/sysctl.d`.
 
       ```console
