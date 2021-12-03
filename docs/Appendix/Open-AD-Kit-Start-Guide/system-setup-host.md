@@ -112,7 +112,7 @@ In this test, we use launch flle placed in Autoware.Auto to run visuzalization q
    Download and setup ADE.
 
    ```console
-   wget https://gitlab.com/ApexAI/ade-cli/-/jobs/1341322852/artifacts/raw/dist/ade+aarch64 -O ade
+   wget https://gitlab.com/ApexAI/ade-cli/-/jobs/1341322851/artifacts/raw/dist/ade+x86_64 -O ade
    chmod +x ade
    mv ade /usr/bin/
    ```
