@@ -151,3 +151,57 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
     </General>
    
    ```
+
+## Shell script for automatic setting up
+
+For above steps, we can use a shell script `openad_target_install_pkgs.sh` to copy docker image and
+download dependency files in one go.
+
+   ```console
+   #!/bin/bash
+
+   if [[ $# -eq 0 ]] ; then
+   	DOCKER_IMAGE_TAG="latest"
+   elif [[ $# -eq 1 ]] ; then
+   	DOCKER_IMAGE_TAG=$1
+   else
+   	echo "Usage: ./openad_target_install_pkgs.sh (download the latest OpenAD kit by default)"
+   	echo "    or ./openad_target_install_pkgs.sh docker_image_tag (with specified OpenAD tag)"
+   	exit 1
+   fi
+
+   # Copy docker image to AVA platform.
+   echo "Install docker image ..."
+   docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:$DOCKER_IMAGE_TAG
+   if [ $? != 0 ]; then
+   	echo "Failed to download docker image with tag $DOCKER_IMAGE_TAG"
+   	exit 1
+   fi
+
+   # Copy files related to map contents.
+   echo "Copy map files ..."
+   mkdir -p ~/map/kashiwanoha
+   pushd ~/map/kashiwanoha
+   wget https://raw.githubusercontent.com/autowarefoundation/autoware_reference_design/main/docs/Appendix/Open-AD-Kit-Start-Guide/map/kashiwanoha/global_map_center.pcd.yaml
+   wget https://raw.githubusercontent.com/autowarefoundation/autoware_reference_design/main/docs/Appendix/Open-AD-Kit-Start-Guide/map/kashiwanoha/lanelet2_map.osm
+   wget https://raw.githubusercontent.com/autowarefoundation/autoware_reference_design/main/docs/Appendix/Open-AD-Kit-Start-Guide/map/kashiwanoha/lanelet2_map_provider.osm.yaml
+   wget https://raw.githubusercontent.com/autowarefoundation/autoware_reference_design/main/docs/Appendix/Open-AD-Kit-Start-Guide/map/kashiwanoha/map.map_publisher.yaml
+   wget https://github.com/autowarefoundation/autoware_reference_design/raw/main/docs/Appendix/Open-AD-Kit-Start-Guide/map/kashiwanoha/pointcloud_map.pcd
+   popd
+
+   # Copy configuration file of Cyclone DDS.
+   echo "Copy Cyclone DDS ..."
+   mkdir -p ~/cyclonedds
+   pushd ~/cyclonedds
+   wget https://raw.githubusercontent.com/autowarefoundation/autoware_reference_design/main/docs/Appendix/Open-AD-Kit-Start-Guide/cyclonedds/cyclonedds.xml
+   network_card=$(ip addr | grep BROADCAST | head -1 | awk -F': ' '{print $2}'); echo $network_card;
+   sed -i "s/>lo</>$network_card</g" cyclonedds.xml
+   popd
+
+   # Copy kernel configuration file for tuning kernel parameters
+   echo "Setup kernel configuration ..."
+   wget https://raw.githubusercontent.com/autowarefoundation/autoware_reference_design/main/docs/Appendix/Open-AD-Kit-Start-Guide/sysctl.d/60_cyclonedds.conf
+   # Update kernel parameters
+   mv ~/60_cyclonedds.conf /etc/sysctl.d/
+   sysctl -p /etc/sysctl.d/60_cyclonedds.conf
+   ```
